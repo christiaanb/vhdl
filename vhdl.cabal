@@ -1,0 +1,22 @@
+name:                vhdl
+version:             0.1
+synopsis:            VHDL AST and pretty printer
+description:         VHDL AST and pretty printer
+category:            Language
+license:             BSD3
+license-file:        LICENSE
+copyright:           Copyright (c) 2009 Christiaan Baaij
+author:              Christiaan Baaij
+maintainer:          christiaan.baaij@gmail.com
+build-type:          Simple
+cabal-version:       >=1.2  
+
+Library
+  extensions:        FlexibleInstances, MultiParamTypeClasses, 
+                     FunctionalDependencies
+  build-depends:     base >= 4.0, regex-posix, pretty, mtl
+  exposed-modules:   Language.VHDL.AST,
+                     Language.VHDL.AST.Ppr
+                     Language.VHDL.Ppr,
+                     Language.VHDL.FileIO
+  other-modules:     Language.VHDL.Error
