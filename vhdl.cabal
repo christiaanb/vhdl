@@ -1,5 +1,5 @@
 name:                vhdl
-version:             0.1
+version:             0.1.1
 synopsis:            VHDL AST and pretty printer
 description:         VHDL AST and pretty printer
 category:            Language

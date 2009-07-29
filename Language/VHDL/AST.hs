@@ -340,7 +340,7 @@ data SliceName = SliceName Prefix DiscreteRange
 
 -- | attribute_name
 --   signatures are not allowed
-data AttribName = AttribName Prefix SimpleName (Maybe Expr)
+data AttribName = AttribName Prefix VHDLName (Maybe Expr)
  deriving Show
 
 -- | block_declarative_item
