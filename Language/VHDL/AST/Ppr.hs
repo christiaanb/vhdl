@@ -275,7 +275,7 @@ instance Ppr [ElseIf] where
  ppr = ppr_list ($+$)
 
 instance Ppr ElseIf where
- ppr (ElseIf cond sms) = text "elseif" <+> ppr cond <+> text "then" $+$
+ ppr (ElseIf cond sms) = text "elsif" <+> ppr cond <+> text "then" $+$
                             nest nestVal (ppr sms)
 
 instance Ppr Else where
