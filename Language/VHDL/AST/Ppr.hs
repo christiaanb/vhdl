@@ -149,6 +149,7 @@ instance Ppr TypeDef where
  ppr (TDA arrayTD) = ppr arrayTD
  ppr (TDR recordTD) = ppr recordTD
  ppr (TDE enumTD) = ppr enumTD
+ ppr (TDI integerTD) = ppr integerTD
 
 instance Ppr ArrayTypeDef where
  ppr (UnconsArrayDef unconsIxs elemsTM) = 
@@ -169,6 +170,9 @@ instance Ppr ElementDec where
 
 instance Ppr EnumTypeDef where
  ppr (EnumTypeDef ids) = lparen <> ppr_list hComma ids <> rparen
+
+instance Ppr IntegerTypeDef where
+ ppr (IntegerTypeDef consIxs) = ppr consIxs
 
 instance Ppr VHDLName where
  ppr (NSimple simple) = ppr simple

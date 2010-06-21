@@ -273,7 +273,7 @@ data TypeDec = TypeDec VHDLId TypeDef
 
 -- | type_declaration
 -- only composite types and enumeration types (a specific scalar type)
-data TypeDef = TDA ArrayTypeDef | TDR RecordTypeDef | TDE EnumTypeDef
+data TypeDef = TDA ArrayTypeDef | TDR RecordTypeDef | TDE EnumTypeDef | TDI IntegerTypeDef
  deriving Show
 
 -- | array_type_definition
@@ -299,6 +299,9 @@ data ElementDec = ElementDec VHDLId TypeMark
 -- | enumeration_type_definition 
 --   enumeration literals can only be identifiers
 data EnumTypeDef = EnumTypeDef [VHDLId]
+ deriving Show
+
+data IntegerTypeDef = IntegerTypeDef DiscreteRange
  deriving Show
 
 -- | name
